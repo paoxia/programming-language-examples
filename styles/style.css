@@ -1,0 +1,15 @@
+p,h1 {
+    color: red;
+}
+
+#my-id {
+    color: gold;
+}
+
+.class {
+    color: blue;
+}
+
+p:hover {
+    color: black;
+}
