@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var person = {
+        name: ["Bob", "Smith"],
+        age: 32,
+        gender: "male",
+        interests: ["music", "skiing"],
+        bio: function () {
+          alert(
+            this.name[0] +
+              " " +
+              this.name[1] +
+              " is " +
+              this.age +
+              " years old. He likes " +
+              this.interests[0] +
+              " and " +
+              this.interests[1] +
+              "."
+          );
+        },
+        greeting: function () {
+          // this 指针
+          alert("Hi! I'm " + this.name[0] + ".");
+        },
+      };
+      console.log(person.name[0]);
+      console.log(person.age);
+      console.log(person["age"]);
+      console.log(person.interests[1]);
+      person.bio();
+      person.greeting();
+
+      // 构造函数
+      function Person(name) {
+        this.name = name;
+        this.greeting = function () {
+          alert("Hi! I'm " + this.name + ".");
+        };
+      }
+      var p = new Person("yu");
+      console.log(p.name);
+      p.greeting();
+
+      // 基于现有对象创建新的对象
+      var person2 = Object.create(p);
+    </script>
+  </head>
+  <body></body>
+</html>

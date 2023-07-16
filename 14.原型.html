@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function doSomething() {}
+      doSomething.prototype.foo = "bar";
+      console.log(doSomething.prototype);
+      var doSomeInstancing = new doSomething();
+      doSomeInstancing.prop = "some value"; // add a property onto the object
+      console.log(doSomeInstancing);
+      // It does not matter how you declare the function, a
+      //  function in javascript will always have a default
+      //  prototype property.
+      var doSomething = function () {};
+      console.log(doSomething.prototype);
+
+      
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript">
+      /*
+       * String
+       * Number
+       * Boolean
+       * Null
+       * Undefined
+       * Object
+       */
+      var str = "hello world";
+      console.log(str);
+      console.log(Number.MAX_VALUE * Number.MAX_VALUE);
+      console.log(typeof str);
+      console.log(Number.POSITIVE_INFINITY);
+      console.log(str.length);
+      console.log(str[0]);
+      console.log("world在字符串中占" + str.indexOf("world"));
+      console.log(str.indexOf("mm"));
+      console.log(str.toUpperCase());
+      console.log(str.toLowerCase());
+      console.log(str.replace("hello", "test"));
+
+      str = "I,am,me";
+      let strArr = str.split(",");
+      console.log(strArr);
+      console.log(strArr.join(","));
+      console.log(strArr.toString());
+
+      var bool = false;
+      console.log(bool);
+      // 空值
+      var n = null;
+      console.log(typeof n);
+      // 声明后不赋值极为undefined
+      var u;
+      console.log(typeof u);
+
+      // 数组
+      let myNameArray = ["Chris", "Bob", "Jim"];
+      let myNumberArray = [10, 15, 40];
+      console.log(myNameArray[0]);
+      // 数组添加和删除项
+      let arr = [10, 15, 40];
+      arr.push(50);
+      console.log("arr:" + arr);
+      arr.pop();
+      console.log("arr:" + arr);
+
+      arr.unshift(0);
+      console.log("arr:" + arr);
+      arr.shift();
+      console.log("arr:" + arr);
+      
+      let sequence = [1, 1, 2, 3, 5, 8, 13];
+      let random = ["tree", 795, [0, 1, 2]];
+      console.log(random[2][2]);
+
+      // 对象
+      let dog = { name: "Spot", breed: "Dalmatian" };
+      console.log(dog.breed);
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var requestURL =
+        "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
+      var request = new XMLHttpRequest();
+      request.open("GET", requestURL);
+      request.responseType = "text"; // now we're getting a string!
+      request.send();
+
+      request.onload = function () {
+        var superHeroesText = request.response; // get the string from the response
+        var superHeroes = JSON.parse(superHeroesText); // convert it to an object
+        console.log(superHeroes);
+      };
+
+      var myJSON = { name: "Chris", age: "38" };
+      console.log(myJSON);
+      var myString = JSON.stringify(myJSON);
+      console.log(myString);
+    </script>
+  </head>
+  <body></body>
+</html>

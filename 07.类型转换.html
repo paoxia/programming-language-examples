@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript">
+      var a = 123;
+      var b = a.toString();
+
+      console.log(typeof a);
+      console.log(typeof b);
+      console.log(a);
+      console.log(b);
+
+      a = true;
+      b = a.toString();
+      console.log(typeof a);
+      console.log(typeof b);
+      console.log(a);
+      console.log(b);
+
+      //   a = null;
+      //   b = a.toString();
+      //   console.log(typeof a);
+      //   console.log(typeof b);
+
+      //   a = undefined;
+      //   b = a.toString();
+      //   console.log(typeof a);
+      //   console.log(typeof b);
+
+      a = 123;
+      b = String(a);
+      console.log(typeof a);
+      console.log(typeof b);
+
+      a = null;
+      b = String(a);
+      console.log(typeof a);
+      console.log(typeof b);
+
+      a = undefined;
+      b = String(a);
+      console.log(typeof a);
+      console.log(typeof b);
+      console.log(a);
+      console.log(b);
+
+      a = "123";
+      b = Number(a);
+      console.log(typeof a);
+      console.log(typeof b);
+      console.log(a);
+      console.log(b);
+
+      a = "abc";
+      b = Number(a);
+      console.log(typeof a);
+      console.log(typeof b);
+      console.log(a);
+      console.log(b);
+
+      a = true;
+      b = Number(a);
+      console.log(typeof a);
+      console.log(typeof b);
+      console.log(a);
+      console.log(b);
+
+      a = null;
+      b = Number(a);
+      console.log(typeof a);
+      console.log(typeof b);
+      console.log(a);
+      console.log(b); // 0
+
+      a = undefined;
+      b = Number(a);
+      console.log(typeof a);
+      console.log(typeof b);
+      console.log(a);
+      console.log(b); // NaN
+
+      // parseInt()
+      // parseFloat()
+      a = "123px";
+      b = parseInt(a);
+      console.log(typeof a);
+      console.log(typeof b);
+      console.log(a);
+      console.log(b);
+
+      a = 0x10; // 16进制
+      console.log(a);
+      a = 070; // 8进制
+      console.log(a);
+      a = 0b10; // 2进制
+      console.log(a);
+
+      a = "070";
+      a = parseInt(a, 10);
+      console.log(a);
+
+      a = 123;
+      b = Boolean(a); // 0和NaN为false
+      console.log(typeof a);
+      console.log(typeof b);
+      console.log(a);
+      console.log(b);
+
+      a = "false";
+      b = Boolean(a); // 除了空串,其余都是true
+      console.log(typeof a);
+      console.log(typeof b);
+      console.log(a);
+      console.log(b);
+
+      a = null;
+      b = Boolean(a); // null和undefined都是false 对象也会转化成true
+      console.log(typeof a);
+      console.log(typeof b);
+      console.log(a);
+      console.log(b);
+    </script>
+  </head>
+  <body></body>
+</html>

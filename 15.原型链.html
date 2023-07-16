@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function Person(first, last, age, gender, interests) {
+        this.name = {
+          first,
+          last,
+        };
+        this.age = age;
+        this.gender = gender;
+        this.interests = interests;
+      }
+
+      Person.prototype.greeting = function () {
+        alert("Hi! I'm " + this.name.first + ".");
+      };
+
+      function Teacher(first, last, age, gender, interests, subject) {
+        Person.call(this, first, last, age, gender, interests);
+
+        this.subject = subject;
+      }
+
+      function Brick() {
+        this.width = 10;
+        this.height = 20;
+      }
+
+      function BlueGlassBrick() {
+        Brick.call(this);
+
+        this.opacity = 0.5;
+        this.color = "blue";
+      }
+
+      class Person1 {
+        constructor(first, last, age, gender, interests) {
+          this.name = {
+            first,
+            last,
+          };
+          this.age = age;
+          this.gender = gender;
+          this.interests = interests;
+        }
+
+        greeting() {
+          console.log(`Hi! I'm ${this.name.first}`);
+        }
+
+        farewell() {
+          console.log(`${this.name.first} has left the building. Bye for now!`);
+        }
+      }
+      let han = new Person1("Han", "Solo", 25, "male", ["Smuggling"]);
+      han.greeting();
+      // Hi! I'm Han
+
+      let leia = new Person1("Leia", "Organa", 19, "female", ["Government"]);
+      leia.farewell();
+      // Leia has left the building. Bye for now
+      class Teacher1 extends Person1 {
+        constructor(first, last, age, gender, interests, subject, grade) {
+          super(first, last, age, gender, interests);
+
+          // subject and grade are specific to Teacher
+          this.subject = subject;
+          this.grade = grade;
+        }
+      }
+
+      let snape = new Teacher1(
+        "Severus",
+        "Snape",
+        58,
+        "male",
+        ["Potions"],
+        "Dark arts",
+        5
+      );
+      snape.greeting(); // Hi! I'm Severus.
+      snape.farewell(); // Severus has left the building. Bye for now.
+      snape.age; // 58
+      snape.subject; // Dark arts
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript">
+      // document.querySelector("html").onclick = function () {
+      //   alert("别戳我，我怕疼。");
+      // };
+
+      //   document.querySelector("html").addEventListener("click", () => {
+      //     alert("别戳我，我怕疼。");
+      //   });
+      window.onload = function () {
+        const btn = document.querySelector("button");
+
+        function bgChange() {
+          const rndCol =
+            "rgb(" +
+            Math.random(255) +
+            "," +
+            Math.random(255) +
+            "," +
+            Math.random(255) +
+            ")";
+          document.body.style.backgroundColor = rndCol;
+        }
+
+        btn.addEventListener("click", bgChange);
+      };
+
+      // 事件对象
+      window.onload = function () {
+        const btn = document.querySelector("button");
+
+        function bgChange(e) {
+          const rndCol =
+            "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+          // e.target指的是发生时间本身
+          e.target.style.backgroundColor = rndCol;
+          console.log(e);
+        }
+
+        btn.addEventListener("click", bgChange);
+      };
+    </script>
+  </head>
+  <body>
+    <button>test</button>
+  </body>
+</html>
