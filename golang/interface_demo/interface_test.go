@@ -1,7 +1,9 @@
-package main
+package interface_demo
 
-import "fmt"
-
+import (
+	"fmt"
+	"testing"
+)
 
 func test(data interface{}) {
 	switch data.(type) {
@@ -15,8 +17,7 @@ func test(data interface{}) {
 
 }
 
-
-func main() {
+func TestInterface(t *testing.T) {
 	test(123)
 	test(1234.1)
 	i := 234

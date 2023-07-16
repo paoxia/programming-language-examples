@@ -1,4 +1,4 @@
-package main
+package io
 
 import (
 	"bufio"
@@ -6,9 +6,10 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"testing"
 )
 
-func main() {
+func TestFile(t *testing.T) {
 	file, err := os.Open("./text")
 	if err != nil {
 		fmt.Println(err.Error())

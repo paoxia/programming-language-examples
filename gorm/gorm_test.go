@@ -3,6 +3,7 @@ package gorm
 import (
 	"fmt"
 	"log"
+	"testing"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -53,7 +54,7 @@ func CreateStudent(i int) error {
 	return db.Create(&test).Error
 }
 
-func main() {
+func TestGorm(t *testing.T) {
 	// Create
 	Init()
 	//CreateStudent()

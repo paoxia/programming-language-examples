@@ -1,8 +1,9 @@
-package main
+package reflect
 
 import (
 	"fmt"
 	"reflect"
+	"testing"
 )
 
 type Person interface {
@@ -35,7 +36,7 @@ func ConstructPerson(p Person) Person {
 	return p
 }
 
-func main() {
+func TestSimple(t *testing.T) {
 	// fmt.Println(reflect.TypeOf(3))
 	// stu := Student{age: 1, name: "yu"}
 	// fmt.Println(reflect.TypeOf(stu))

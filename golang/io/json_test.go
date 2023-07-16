@@ -1,15 +1,16 @@
-package main
+package io
 
 import (
 	"encoding/json"
 	"fmt"
+	"testing"
 )
 
 type JsonHelper struct {
 	ParamOne string `json:"param_one"`
 }
 
-func main() {
+func TestJson(t *testing.T) {
 
 	from := JsonHelper{ParamOne: "test"}
 
