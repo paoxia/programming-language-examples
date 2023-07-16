@@ -1,4 +1,4 @@
-module github.com/DangOYear/programming-language-examples
+module github.com/paoxia/programming-language-examples
 
 go 1.17
 
