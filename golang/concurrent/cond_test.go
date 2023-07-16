@@ -1,8 +1,9 @@
-package main
+package concurrent
 
 import (
 	"fmt"
 	"sync"
+	"testing"
 	"time"
 )
 
@@ -22,7 +23,7 @@ func Producer(producerName string, c *sync.Cond) {
 	c.Broadcast() //c.Signal()
 }
 
-func main() {
+func TestCond(t *testing.T) {
 	cond := sync.NewCond(&sync.Mutex{})
 	go Consumer("consumer1", cond)
 	go Consumer("consumer2", cond)

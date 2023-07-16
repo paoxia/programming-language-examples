@@ -1,12 +1,15 @@
-package main
+package concurrent
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 func input() {
 
 }
 
-func main() {
+func TestChannel(t *testing.T) {
 	ch := make(chan int, 2)
 	ch <- 2
 	ch <- 1

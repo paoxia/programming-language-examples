@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	"github.com/golang/mock/gomock"
+	"github.com/paoxia/programming-language-examples/mock/gomock/test/test_helper"
 	"github.com/stretchr/testify/assert"
 )
-
 
 func TestFoo(t *testing.T) {
 	ctrl := gomock.NewController(t)
@@ -14,7 +14,7 @@ func TestFoo(t *testing.T) {
 	// Assert that Bar() is invoked.
 	defer ctrl.Finish()
 
-	m := NewMockFoo(ctrl)
+	m := test_helper.NewMockFoo(ctrl)
 
 	// Asserts that the first and only call to Bar() is passed 99.
 	// Anything else will fail.

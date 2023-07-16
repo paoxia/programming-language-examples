@@ -1,12 +1,13 @@
-package main
+package redis
 
 import (
 	"log"
+	"testing"
 
 	"github.com/gomodule/redigo/redis"
 )
 
-func main() {
+func TestRedis(t *testing.T) {
 	// connect redis
 	conn, err := redis.Dial("tcp", ":6379")
 	if err != nil {

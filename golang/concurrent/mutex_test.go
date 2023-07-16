@@ -1,8 +1,9 @@
-package main
+package concurrent
 
 import (
 	"fmt"
 	"sync"
+	"testing"
 )
 
 var mu sync.Mutex
@@ -17,7 +18,7 @@ func f() {
 	wg.Done()
 }
 
-func main() {
+func TestMutex(t *testing.T) {
 	for i := 0; i <= 9; i++ {
 		wg.Add(1)
 		go f()
