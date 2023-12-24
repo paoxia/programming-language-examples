@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      .title {
-        background-color: green;
-        width: 200px;
-      }
-    </style>
   </head>
   <body>
     <div id="test"></div>
@@ -24,17 +18,16 @@
     <script type="text/javascript" src="../js/babel.min.js"></script>
 
     <script type="text/babel">
-      const myID = "titles";
-      const myData = "Hello,React";
+      const data = ["Angular", "Vue", "React"];
       // 1.创建虚拟DOM
       const VDOM = (
         <div>
-          <h2 className="title" id={myID.toLocaleLowerCase()}>
-            <span style={{ color: "white", fontSize: "20px" }}>
-              {myData.toLocaleLowerCase()}
-            </span>
-          </h2>
-          <input type="text" />
+          <h1>前端js框架</h1>
+          <ul>
+            {data.map((item, index) => {
+              return <li key={index}>{item}</li>;
+            })}
+          </ul>
         </div>
       ); // 不用写引号
       // 2.渲染虚拟DOM到页面
