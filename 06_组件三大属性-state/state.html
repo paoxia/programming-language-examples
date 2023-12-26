@@ -27,7 +27,10 @@
 
         render() {
           const { isHot } = this.state;
-          return <h1 onClick={demo}>今天天气很{isHot ? "炎热" : "凉爽"}</h1>;
+          return <h1 onClick={this.changeWeather}>今天天气很{isHot ? "炎热" : "凉爽"}</h1>;
+        }
+        changeWeather() {
+          console.log(this.state.isHot);
         }
       }
       // 2.渲染组件到页面
@@ -40,9 +43,7 @@
       // title.onclick = () => {
       //   console.log("标题被点击了");
       // };
-      function demo() {
-        console.log("标题被点击了");
-      }
+
     </script>
   </body>
 </html>

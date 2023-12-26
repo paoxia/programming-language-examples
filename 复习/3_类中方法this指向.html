@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script  type="text/javascript">
+      //创建Person类
+      class Person {
+        constructor(name, age) {
+          // 构造器的this是类的实例对象
+          this.name = name;
+          this.age = age;
+        }
+
+        // 一般方法
+        speak() {
+          console.log(this);
+        }
+      }
+
+      const p1 = new Person("小杨", 18);
+      p1.speak();
+    </script>
+</body>
+</html>
