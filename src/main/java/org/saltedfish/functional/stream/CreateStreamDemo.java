@@ -1,4 +1,4 @@
-package org.saltedfish.stream;
+package org.saltedfish.functional.stream;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
