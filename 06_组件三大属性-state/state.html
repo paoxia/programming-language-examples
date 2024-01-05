@@ -20,16 +20,27 @@
     <script type="text/babel">
       // 1.创建类式组件
       class Weather extends React.Component {
+        // 构造器调用1次
         constructor(props) {
           super(props);
-          this.state = { isHot: false, wind: "大风" };
+          this.state = { isHot: false };
+          // 解决changeWeather中this指向问题
+          this.changeWeather = this.changeWeather.bind(this);
         }
-
+        // render调用多次 初始化一次,每次修改调用一次
         render() {
           const { isHot } = this.state;
-          return <h1 onClick={this.changeWeather}>今天天气很{isHot ? "炎热" : "凉爽"}</h1>;
+          return (
+            <h1 onClick={this.changeWeather}>
+              今天天气很{isHot ? "炎热" : "凉爽"}
+            </h1>
+          );
         }
         changeWeather() {
+          const isHot = this.state.isHot;
+          // this.state.isHot = !isHot; 不能直接修改
+          // 更新不是替换
+          this.setState({ isHot: !isHot });
           console.log(this.state.isHot);
         }
       }
@@ -43,8 +54,6 @@
       // title.onclick = () => {
       //   console.log("标题被点击了");
       // };
-
     </script>
   </body>
 </html>
- 
