@@ -18,5 +18,9 @@ public class CallableFutureDemo {
         ExecutorService executorService = Executors.newFixedThreadPool(3);
         Future<Integer> res = executorService.submit(new CallableFutureTask());
         System.out.println(res.get());
+
+        // use
+        FutureTask ft = new FutureTask<>(new CallableFutureTask());
+        System.out.println(ft.get());
     }
 }
