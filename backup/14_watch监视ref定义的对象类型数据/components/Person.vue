@@ -5,9 +5,6 @@
         <button @click="changeName">changeName</button>
         <button @click="changeAge">changeAge</button>
         <button @click="changePerson">changePerson</button>
-        <hr>
-        <h2>{{ obj.a.b.c }}</h2>
-        <button @click="test">changePerson</button>
     </div>
 </template>
 
@@ -15,48 +12,29 @@
 
 <script lang="ts" setup name="Person">
 
-import { reactive, watch } from 'vue'
-let person = reactive({
+import { ref, watch } from 'vue'
+let person = ref({
     name: 'zhangsan',
     age: 18,
 })
 
-let obj = reactive({
-    a: {
-        b: {
-            c: 666
-        }
-    }
-})
-
 
 function changeName() {
-    person.name += '-'
+    person.value.name += '-'
 }
 
 function changeAge() {
-    person.age += 1
+    person.value.age += 1
 }
 
 function changePerson() {
-    Object.assign(person, { name: "lisi", age: 19 })
-
+    person.value = { name: "lisi", age: 19 }
 }
 
-function test() {
-    obj.a.b.c = 999
-}
-
-// 默认深度watch
+// 监视的是对象地址值 想要监视对象内部属性的变化 需要开始深度监视
 watch(person, (newValue, oldValue) => {
     console.log('person changed', newValue, oldValue)
-})
-// 修改对象的属性值，newValue和oldValue是同一个值
-
-
-watch(obj, (newValue, oldValue) => {
-    console.log('obj changed', newValue, oldValue)
-})
+}, { deep: true })
 // 修改对象的属性值，newValue和oldValue是同一个值
 
 

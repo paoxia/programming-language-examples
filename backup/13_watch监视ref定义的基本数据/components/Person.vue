@@ -16,14 +16,14 @@ function changeSum() {
     sum.value += 1
 }
 
-const x = watch(sum, (newValue, oldValue) => {
+const stopWatch = watch(sum, (newValue, oldValue) => {
     console.log('sum变化了', newValue, oldValue)
     if (newValue >= 3) {
-        x()
+        stopWatch()
     }
 })
 
-console.log(x)
+console.log(stopWatch)
 
 </script>
 
