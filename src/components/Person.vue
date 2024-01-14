@@ -1,24 +1,13 @@
 <template>
     <div class="person">
-
+        <h2>{{ a }}</h2>
     </div>
 </template>
   
 <script lang="ts" setup name="Person">
-import { type Persons } from '@/types'
-// let person: Array<PersonInter> = [
-//     { id: '123', name: 'zhangsan', age: 18 },
-//     { id: '124', name: 'lisi', age: 19 },
-//     { id: '125', name: 'wangwu', age: 20 }
-// ]
+import { defineProps } from 'vue'
 
-let person: Persons = [
-    { id: '123', name: 'zhangsan', age: 18 },
-    { id: '124', name: 'lisi', age: 19 },
-    { id: '125', name: 'wangwu', age: 20 }
-]
-
-
+defineProps(['a'])
 
 </script>
 
