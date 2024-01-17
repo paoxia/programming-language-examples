@@ -1,17 +1,22 @@
 <template>
-  <Person v-if="isShow" />
+  <h2 a="1+1" :b="1 + 1" c="x" :d="x"></h2>
+  <Person a="haha" :list="personList" />
   <!-- :来接数据 -->
 </template>
 
 
 <script lang="ts" setup name="App">
 import Person from './components/Person.vue'
-import { reactive, onMounted } from 'vue';
+import { reactive } from 'vue';
 import { type Persons } from '@/types'
 
-let isShow = true
-// 挂载后
-onMounted(() => { console.log("父-挂载后") })
+let x = 9
+let personList = reactive<Persons>([
+  { id: '123', name: 'zhangsan', age: 18 },
+  { id: '124', name: 'lisi', age: 19 },
+  { id: '125', name: 'wangwu', age: 20 }
+])
+
 </script>
 
 <style>
