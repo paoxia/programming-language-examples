@@ -24,8 +24,8 @@ const router = createRouter({
             component: News,
             children: [
                 {
-                    name:'neirong',
-                    path: 'detail/:id/:title/:content',
+                    name: 'neirong',
+                    path: 'detail/:id/:title/:content?', // ?配置
                     component: Detail
                 }
             ]
