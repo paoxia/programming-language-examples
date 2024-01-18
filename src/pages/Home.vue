@@ -5,6 +5,10 @@
 </template>
   
 <script setup lang="ts" name="Home">
+import { onUnmounted } from 'vue'
+onUnmounted(() => {
+    console.log("home卸载了")
+})
 
 </script>
   
