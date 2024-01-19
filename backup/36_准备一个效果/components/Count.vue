@@ -1,6 +1,6 @@
 <template>
     <div class="count">
-        <h2>sum: {{ countStore.sum }}</h2>
+        <h2>sum: {{ sum }}</h2>
         <select v-model.number="n">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -10,25 +10,22 @@
         <button @click="Minus">-</button>
     </div>
 </template>
-
-<script setup lang="ts" name="Count">
-import { ref, reactive } from "vue";
-import { useCountStore } from "@/store/count";
-
-const countStore = useCountStore();
-console.log(countStore.sum);
-console.log(countStore.$state.sum);
-let n = ref(1);
+    
+<script setup lang='ts' name="Count">
+import { ref } from "vue"
+let sum = ref(1)
+let n = ref(1)
 
 function Add() {
-    countStore.sum += n.value
+    sum.value += n.value
 }
+
 
 function Minus() {
-    countStore.sum -= n.value
+    sum.value -= n.value
 }
 </script>
-
+    
 <style scoped>
 .count {
     background-color: aqua;
