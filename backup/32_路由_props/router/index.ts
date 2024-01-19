@@ -28,7 +28,7 @@ const router = createRouter({
                     path: 'detail/:id/:title/:content',
                     component: Detail,
                     // 第一种param传入
-                    props: true
+                    // props: true
 
                     // 第二种 函数写法
                     // props(route) {
@@ -36,11 +36,11 @@ const router = createRouter({
                     // }
 
                     // 对象写法
-                    // props: {
-                    //     id: 100,
-                    //     title: 1200,
-                    //     content: 300
-                    // }
+                    props: {
+                        id: 100,
+                        title: 1200,
+                        content: 300
+                    }
                 }
             ]
         },
@@ -48,9 +48,6 @@ const router = createRouter({
             name: 'guanyu',
             path: '/about',
             component: About
-        },{
-            path:'/',
-            redirect:'/home'
         }
     ]
 })

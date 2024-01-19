@@ -5,17 +5,9 @@
 </template>
   
 <script setup lang="ts" name="Home">
-import { onMounted } from 'vue'
-import { useRouter } from 'vue-router';
-
-const router = useRouter()
-onMounted(() => {
-    setTimeout(
-        () => {
-            // console.log("jump")
-            // 在此处编写一段代码,直接跳转
-            router.push('/news')
-        }, 3000)
+import { onUnmounted } from 'vue'
+onUnmounted(() => {
+    console.log("home卸载了")
 })
 
 </script>
