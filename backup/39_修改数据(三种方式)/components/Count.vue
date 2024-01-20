@@ -1,9 +1,9 @@
 <template>
     <div class="count">
-        <h2>sum: {{ sum }}, mul10 :{{ bigSum }}</h2>
+        <h2>sum: {{ countStore.sum }}</h2>
         <hr>
-        <h2>school:{{ school }},upperCase :{{ upperSchool }}</h2>
-        <h2>address:{{ address }}</h2>
+        <h2>school:{{ countStore.school }}</h2>
+        <h2>address:{{ countStore.address }}</h2>
         <select v-model.number="n">
             <option value="1">1</option>
             <option value="2">2</option>
@@ -15,18 +15,13 @@
 </template>
 
 <script setup lang="ts" name="Count">
-import { ref, reactive, toRefs } from "vue";
+import { ref, reactive } from "vue";
 import { useCountStore } from "@/store/count";
-import { storeToRefs } from "pinia";
-
 
 const countStore = useCountStore();
 console.log(countStore.sum);
 console.log(countStore.$state.sum);
 let n = ref(1);
-// 只关注store中的数据 不会对方法进行ref
-const { sum, school, address, bigSum, upperSchool } = storeToRefs(countStore)
-console.log(storeToRefs(countStore))
 
 function Add() {
     // 第一种修改
@@ -43,11 +38,12 @@ function Add() {
 
     // 第三种修改
     countStore.increment(n.value)
-
 }
 
 function Minus() {
     countStore.sum -= n.value
+    countStore.school += 'zhongguo'
+    countStore.address += 'hz'
 }
 </script>
 

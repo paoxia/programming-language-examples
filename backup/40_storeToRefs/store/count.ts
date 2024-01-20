@@ -17,21 +17,5 @@ export const useCountStore = defineStore('count', {
             address: "dizhi",
             school: "shehui"
         }
-    },
-    getters: {
-        // bigSum(state) {
-        //     return state.sum * 10
-        // },
-        // bigSum() {
-        //     return this.sum * 10
-        // },
-        bigSum: state => state.sum * 10,
-        // upperSchool(state) {
-        //     return state.school.toUpperCase()
-        // }
-
-        upperSchool(): string {
-            return this.school.toUpperCase()
-        }
     }
 })

@@ -1,8 +1,8 @@
 <template>
     <div class="count">
-        <h2>sum: {{ sum }}, mul10 :{{ bigSum }}</h2>
+        <h2>sum: {{ sum }}</h2>
         <hr>
-        <h2>school:{{ school }},upperCase :{{ upperSchool }}</h2>
+        <h2>school:{{ school }}</h2>
         <h2>address:{{ address }}</h2>
         <select v-model.number="n">
             <option value="1">1</option>
@@ -25,7 +25,7 @@ console.log(countStore.sum);
 console.log(countStore.$state.sum);
 let n = ref(1);
 // 只关注store中的数据 不会对方法进行ref
-const { sum, school, address, bigSum, upperSchool } = storeToRefs(countStore)
+const { sum, school, address } = storeToRefs(countStore)
 console.log(storeToRefs(countStore))
 
 function Add() {
