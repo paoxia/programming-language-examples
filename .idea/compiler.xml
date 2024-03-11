@@ -7,9 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="programming-language-examples" />
         <module name="JavaExample" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="programming-language-examples" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
