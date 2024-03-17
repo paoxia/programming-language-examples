@@ -56,7 +56,6 @@ public class PipedDemo {
 
 
     public static void main(String[] args) throws IOException {
-        String s = "123";
         PipedWriter writer = new PipedWriter();
         PipedReader reader = new PipedReader();
 
