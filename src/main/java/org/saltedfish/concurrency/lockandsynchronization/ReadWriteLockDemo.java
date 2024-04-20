@@ -39,6 +39,9 @@ class ReadWriteLockArray {
         }
     }
 
+    public int[] getNum() {
+        return num;
+    }
 }
 
 public class ReadWriteLockDemo {
