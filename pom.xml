@@ -15,6 +15,7 @@
                 <configuration>
                     <source>8</source>
                     <target>8</target>
+                    <encoding>utf8</encoding>
                 </configuration>
             </plugin>
         </plugins>
@@ -37,6 +38,13 @@
             <version>4.13.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>3.7.0</version>
+        </dependency>
+
+
     </dependencies>
 
 </project>
