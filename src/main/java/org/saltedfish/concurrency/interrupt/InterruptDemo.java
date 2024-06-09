@@ -90,9 +90,20 @@ public class InterruptDemo {
         t2.start();
     }
 
+
+    public static void TestInterrupted() {
+        System.out.println(Thread.currentThread().getName() + "-" + Thread.interrupted());
+        System.out.println(Thread.currentThread().getName() + "-" + Thread.interrupted());
+        System.out.println("分割线");
+        Thread.currentThread().interrupt();
+        System.out.println(Thread.currentThread().getName() + "-" + Thread.interrupted());
+        System.out.println(Thread.currentThread().getName() + "-" + Thread.interrupted());
+    }
+
     public static void main(String[] args) throws InterruptedException {
         //FuncAtomicBoolean();
         //FuncInterrupt();
-        FuncInterruptWithSleep();
+        //FuncInterruptWithSleep();
+        TestInterrupted();
     }
 }
