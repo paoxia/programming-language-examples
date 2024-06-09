@@ -17,10 +17,10 @@ func Consumer(consumerName string, c *sync.Cond) {
 func Producer(producerName string, c *sync.Cond) {
 	time.Sleep(time.Second * 2)
 	c.L.Lock()
-	c.L.Unlock()
 
 	fmt.Println(producerName)
 	c.Broadcast() //c.Signal()
+	c.L.Unlock()
 }
 
 func TestCond(t *testing.T) {
