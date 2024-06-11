@@ -4,7 +4,7 @@ import java.util.concurrent.locks.LockSupport;
 
 public class LockSupportDemo {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void ParkTest() throws InterruptedException {
         Thread t1 = new Thread(() -> {
             System.out.println(Thread.currentThread().getName() + "-" + "start");
             LockSupport.park();
@@ -17,6 +17,10 @@ public class LockSupportDemo {
             LockSupport.unpark(t1);
         }).start();
 
+    }
 
+
+    public static void main(String[] args) throws InterruptedException {
+        ParkTest();
     }
 }
