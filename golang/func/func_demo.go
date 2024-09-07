@@ -1,9 +1,8 @@
 package main
 
 
-type HanlderFunc func ()  {
-	
-}
+// type HanlderFunc func ()  {
+// }
 
 func main() {
 
