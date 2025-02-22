@@ -2,6 +2,7 @@ package org.saltedfish.thirdpartylibraries.lib;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -19,5 +20,8 @@ public class LangUtils {
 
         Boolean b = false;
         System.out.println(BooleanUtils.isFalse(b));
+
+        Objects o = null;
+        System.out.println(Objects.isNull(o));
     }
 }
