@@ -1,4 +1,4 @@
-package org.saltedfish.thirdpartylibraries.lombok;
+package org.saltedfish.thirdpartylib.lombok;
 
 
 import lombok.AllArgsConstructor;
@@ -11,8 +11,8 @@ import lombok.Setter;
 import lombok.Value;
 
 /**
- * @Setter  提供setter方法
- * @Getter  提供getter方法
+ * @Setter 提供setter方法
+ * @Getter 提供getter方法
  * @AllArgsConstructor 提供全参构造函数
  * @NoArgsConstructor 提供无参构造函数
  * @EqualsAndHashCode 提供equals和hashcode方法

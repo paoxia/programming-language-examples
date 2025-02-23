@@ -1,13 +1,11 @@
-package org.saltedfish.thirdpartylibraries.guava;
+package org.saltedfish.thirdpartylib.guava;
 
+import java.util.concurrent.TimeUnit;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 
-import java.util.concurrent.TimeUnit;
-
 /**
  * @author SaltedFish
- *
  */
 public class GuavaCacheDemo {
     public static void main(String[] args) {

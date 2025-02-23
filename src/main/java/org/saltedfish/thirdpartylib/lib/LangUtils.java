@@ -1,4 +1,4 @@
-package org.saltedfish.thirdpartylibraries.lib;
+package org.saltedfish.thirdpartylib.lib;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,10 +1,9 @@
-package org.saltedfish.thirdpartylibraries.guava;
+package org.saltedfish.thirdpartylib.guava;
 
 import com.google.common.hash.BloomFilter;
 import com.google.common.hash.Funnels;
 
 /**
- *
  * @author SaltedFish
  * @date 2021/1/16
  */
