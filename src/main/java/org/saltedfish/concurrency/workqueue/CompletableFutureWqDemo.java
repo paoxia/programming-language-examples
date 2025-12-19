@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 /**
  * 工作队列demo
  */
-public class WorkQueueDemo {
+public class CompletableFutureWqDemo {
 
 
     public static void main(String[] args) {
