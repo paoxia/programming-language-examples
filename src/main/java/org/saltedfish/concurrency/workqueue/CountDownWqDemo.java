@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -34,7 +35,7 @@ public class CountDownWqDemo {
 
 
         try {
-            countDownLatch.await();
+            countDownLatch.await(10, TimeUnit.SECONDS);
         } catch (Exception e) {
             log.error("CountDownWqDemo", e);
         }
