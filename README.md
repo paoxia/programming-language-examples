@@ -12,3 +12,4 @@
 - Branch springboot - SpringBoot example
 - Branch typescript - TypeScript example
 - Branch vue3 - Vue3 example
+- Branch rust - Rust example
