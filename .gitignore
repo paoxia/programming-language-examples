@@ -3,3 +3,5 @@
 golang/io/__debug_bin
 target
 bin
+.claude/
+.workbuddy
